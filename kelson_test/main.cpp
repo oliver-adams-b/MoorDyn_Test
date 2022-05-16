@@ -9,9 +9,9 @@
 using namespace std;
 
 
-int main(int, char**)
+int main(int argc, char* argv[])
 {
-    MoorDyn system = MoorDyn_Create("kelson_test/specifications/line.txt");;
+    MoorDyn system = MoorDyn_Create(argv[1]);
     if (!system)
     {
         cerr << "Failure Creating the Mooring system" << endl;
@@ -44,10 +44,11 @@ int main(int, char**)
         return 3;
     }
 
+    /*
     double dt = 0.00016;
     const unsigned int nts = 100000;
-    // double dt = 0.001;
-    // const unsigned int nts = 1000;
+    //double dt = 0.001;
+    //const unsigned int nts = 1000;
     for (unsigned int i = 0; i < nts; i++){
         double t = i * dt;
 
@@ -61,5 +62,6 @@ int main(int, char**)
     }
 
     err = MoorDyn_Close(system);
+    */
     return 0;
 }
