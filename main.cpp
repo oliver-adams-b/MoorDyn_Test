@@ -45,10 +45,10 @@ int main(int argc, char* argv[])
     }
 
     
-    //double dt = 0.00016;
-    //const unsigned int nts = 100000;
-    double dt = 0.001;
-    const unsigned int nts = 1000;
+    double dt = 0.00016;
+    const unsigned int nts = 100000;
+    //double dt = 0.001;
+    //const unsigned int nts = 1000;
     for (unsigned int i = 0; i < nts; i++){
         double t = i * dt;
 
