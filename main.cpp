@@ -27,16 +27,6 @@ int main(int argc, char* argv[])
     }
 
     int err;
-    // double x[3], dx[3];
-    
-    // err = MoorDyn_GetConnectPos(system,2,x);
-    // if (err != MOORDYN_SUCCESS) {
-    //     cerr << "Failure retrieving the fairlead " << 4
-    //             << " position: " << err << endl;
-    //     MoorDyn_Close(system);
-    //     return 1;
-    // }
-
     err = MoorDyn_Init(system, NULL, NULL);
     if (err != MOORDYN_SUCCESS){
         cerr << "Failure during the mooring initialization: " << err << endl;
