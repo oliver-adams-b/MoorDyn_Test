@@ -4,13 +4,13 @@ import pandas as pd
 from scipy.optimize import curve_fit
 
 
-full_df = pd.read_csv("/home/oliver/Desktop/kelson/MoorDyn-dev/kelson_test/specifications/line_Line1.out", 
+full_df = pd.read_csv("/home/oliver/Desktop/kelson/MoorDyn-dev/kelson_test/specifications/line_stretched_Line1.out", 
                       sep = "\t", 
                       dtype= str)
 
  
 tension = full_df[["Time", " Seg1Te "]]
-tension = tension.iloc[3::100, :]
+tension = tension.iloc[20000::1000, :]
 
 t = tension["Time"].apply(float).to_numpy()
 T = tension[" Seg1Te "].apply(float).to_numpy()

@@ -27,6 +27,16 @@ int main(int argc, char* argv[])
     }
 
     int err;
+    // double x[3], dx[3];
+    
+    // err = MoorDyn_GetConnectPos(system,2,x);
+    // if (err != MOORDYN_SUCCESS) {
+    //     cerr << "Failure retrieving the fairlead " << 4
+    //             << " position: " << err << endl;
+    //     MoorDyn_Close(system);
+    //     return 1;
+    // }
+
     err = MoorDyn_Init(system, NULL, NULL);
     if (err != MOORDYN_SUCCESS){
         cerr << "Failure during the mooring initialization: " << err << endl;
@@ -35,10 +45,10 @@ int main(int argc, char* argv[])
     }
 
     
-    double dt = 0.00016;
-    const unsigned int nts = 100000;
-    //double dt = 0.001;
-    //const unsigned int nts = 1000;
+    //double dt = 0.00016;
+    //const unsigned int nts = 1000000;
+    double dt = 0.0001;
+    const unsigned int nts = 30000;
     for (unsigned int i = 0; i < nts; i++){
         double t = i * dt;
 

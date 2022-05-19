@@ -4,7 +4,7 @@ from matplotlib.pyplot import rcParams
 rcParams['figure.figsize'] = 20, 10
 import pandas as pd
 
-full_df = pd.read_csv("/home/oliver/Desktop/kelson/MoorDyn-dev/kelson_test/specifications/line_Line1.out", 
+full_df = pd.read_csv("/home/oliver/Desktop/kelson/MoorDyn-dev/kelson_test/speed_study/line_30_Line56.out", 
                       sep = "\t", 
                       dtype= str)
 
@@ -19,7 +19,7 @@ segments = list({int(("").join(c.split("Node")).split("p")[0]) for c in columns 
 
 counter = 0
 tension = full_df[" Seg1Te "]
-step = 1500
+step = 2500
 
 for i in full_df.index[3::step]:
     counter = counter + 1
@@ -29,7 +29,7 @@ for i in full_df.index[3::step]:
     
     for s in segments:
         x = float(temp_series[" Node{}px ".format(s)].replace(" ", ""))
-        y = float(temp_series[" Node{}pz ".format(s)].replace(" ", ""))
+        y = float(temp_series[" Node{}py ".format(s)].replace(" ", ""))
         #z = temp_series[" Node{}pz ".format(s)]
         segment_timestamp.append([x, y])
         

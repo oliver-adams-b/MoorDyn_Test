@@ -1,0 +1,17 @@
+MoorDyn v2 log file with output level 2
+Note: options above the writeLog line in the input file will not be recorded
+----- MoorDyn Model Summary (to be written) -----
+  - Line1:
+    ID: 1
+    UnstrLen: 10
+    N: 30
+    d   : 0.008
+    rho : 21883.8
+    E   : 1.49407e+11
+    EI  : 100
+    BAin: -0.3
+    Can : 1
+    Cat : 0
+    Cdn : 2.4
+    Cdt : 0.1
+    ww_l: 10.2856
